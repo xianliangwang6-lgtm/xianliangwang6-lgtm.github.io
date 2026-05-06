@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thai Care Kids · Cross-border Children Charity Rescue</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:system-ui}
+        body{
+            background:#f8fafc;
+            color:#333;
+            line-height:1.7;
+            background-image:url('bg.jpg');
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+        }
+        .mask{background:rgba(255,255,255,0.88);min-height:100vh}
+        header{background:#e11d48;color:white;padding:40px 20px;text-align:center}
+        h1{font-size:32px;margin-bottom:10px}
+        .box{max-width:900px;margin:40px auto;padding:0 20px}
+        .card{background:rgba(255,255,255,0.96);padding:30px;border-radius:16px;box-shadow:0 2px 12px #00000010;margin-bottom:24px}
+        h2{color:#e11d48;margin-bottom:16px;text-align:center}
+        .big-slogan{
+            font-size:26px;
+            font-weight:bold;
+            color:#e11d48;
+            text-align:center;
+            margin:15px 0;
+        }
+        p{margin-bottom:14px;font-size:16px}
+        .btn{display:inline-block;background:#e11d48;color:white;padding:14px 28px;border-radius:99px;text-decoration:none;margin-top:10px;border:none;cursor:pointer}
+        footer{text-align:center;padding:40px;color:#777;margin-top:60px}
+        .qrc-wrap{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin:20px 0}
+        .qrcode-img{
+            width:200px;
+            border-radius:12px
+        }
+        .address-box{
+            background:#f1f1f1;
+            padding:14px;
+            border-radius:10px;
+            word-break:break-all;
+            display:flex;gap:10px;align-items:center;margin:10px 0
+        }
+        .copy-btn{
+            white-space:nowrap;background:#e11d48;color:white;border:none;padding:8px 14px;border-radius:8px;cursor:pointer
+        }
+        .photo-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:12px;
+            margin:25px 0
+        }
+        .photo-grid img{
+            width:100%;
+            height:160px;
+            object-fit:cover;
+            border-radius:12px
+        }
+    </style>
+</head>
+<body>
+<div class="mask">
+<header>
+    <h1>Thai Care Kids</h1>
+    <p>Global Kindness · Cross-border Anonymous Children Life Rescue Charity Program</p>
+</header>
+
+<div class="box">
+    <div class="card">
+        <h2>Project Introduction</h2>
+        <div class="big-slogan">Every Donation Can Save A Life</div>
+        <p>We are independent global volunteer charity team. We help poor children, homeless families and stray creatures in Southeast Asia. No official funding, no company profit. All money will be fully recorded and used for life rescue only. Anonymous cross-border worldwide donation available.</p>
+    </div>
+
+    <div class="card">
+        <h2>Charity Donation Ways</h2>
+        <p style="text-align:center">Scan QR Code or copy wallet address</p>
+
+        <div class="qrc-wrap">
+            <div>
+                <p style="text-align:center;font-weight:bold">PayPal</p>
+                <img src="paypal.jpg" class="qrcode-img">
+            </div>
+            <div>
+                <p style="text-align:center;font-weight:bold">USDT TRC20</p>
+                <img src="usdt.jpg" class="qrcode-img">
+            </div>
+        </div>
+
+        <p><strong>USDT TRC20 Wallet Address:</strong></p>
+        <div class="address-box">
+            <span id="usdtAddr">你的钱包地址粘贴在这里</span>
+            <button class="copy-btn" onclick="copyAddr()">Copy All</button>
+        </div>
+    </div>
+
+    <div class="card">
+        <p style="font-size:17px;line-height:1.8;text-align:center;margin-bottom:30px">
+My personal strength is limited.I cannot save everyone alone.
+But with every small kindness from you, together we can bring hope, warmth and survival chances to more suffering children and helpless lives in Southeast Asia.
+One person lights a candle, countless people light up the world. Thank you for walking with us.
+No borders, no language barriers. Gather small kindness to protect every child’s equal right to live.
+        </p>
+
+        <div class="photo-grid">
+            <img src="pic1.jpg">
+            <img src="pic2.jpg">
+            <img src="pic3.jpg">
+            <img src="pic4.jpg">
+            <img src="pic5.jpg">
+            <img src="pic6.jpg">
+        </div>
+    </div>
+</div>
+
+<footer>© 2025 ThaiCareKids Independent Cross-border Children Welfare Organization</footer>
+</div>
+
+<script>
+function copyAddr(){
+  const t = document.getElementById('usdtAddr').innerText;
+  navigator.clipboard.writeText(t);alert('Copied Successfully!')
+}
+</script>
+</body>
+</html>
