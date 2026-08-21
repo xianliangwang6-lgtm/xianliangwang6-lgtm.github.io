@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: smart-text-reader
+    env: static
+    buildCommand: ""
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /reader
+        destination: /reader.html
