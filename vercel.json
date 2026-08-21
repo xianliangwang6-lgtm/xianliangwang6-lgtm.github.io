@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "name": "smart-text-reader",
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/reader",
+      "dest": "/reader.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
